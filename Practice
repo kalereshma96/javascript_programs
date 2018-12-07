@@ -1,8 +1,0 @@
-<script type = "text/javascript">
-var globalVar = "This is global variable";
-function fun(){
-    var localVar = "This is local variable";
-    console.log(globalVar);
-    console.log(localVar);
-}
-fun();

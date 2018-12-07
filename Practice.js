@@ -1,4 +1,13 @@
-var a = require('readline')
+var readline = require('readline')
+
+var read = readline.createInterface({
+    input:process.stdin,
+    output:process.stdout
+
+});
+read.setPrompt();
+read.prompt();
+
 // var globalVar = "This is global variable";
 // function fun(){
 //     var localVar = "This is local variable";
@@ -484,3 +493,63 @@ var a = require('readline')
 // console.log(dt.getMilliseconds());
 // console.log(dt.getMinutes());
 // console.log(dt.getTimezoneOffset());
+
+// var name = prompt("what is your name");
+// console.log("hi"+name);
+
+// var fs=require('fs');
+// // var data=fs.readFileSync('word.json');
+// // var words = JSON.parse(data);
+// // var bodyparser=require('body-parser');
+// // console.log(words);
+// fs.open('sample.txt','w',function(err,file){
+//    if (err) throw err;
+//    console.log("saved..")
+// }
+// );
+// fs.writeFile('sample.txt','hello reshma',function(err){
+//     if(err) throw err;
+//     console.log("saved");
+// }
+// );
+// fs.appendFile('sample.txt','finally done with file operation',function(err){
+//     if(err) throw err;
+//     console.log("Updated...");
+// }
+// );
+// fs.writeFile('sample.txt','this is replace content of file',function(err){
+//     if (err) throw err;
+//     console.log("replaced..");
+// }
+// );
+// fs.rename('sample.txt','myrenamefile.txt',function(err){
+//     if(err) throw err;
+//     console.log("Renamed successful...!");
+// }
+// );
+
+// var readline = require('readline');
+// var fs = require('fs');
+// var myInterface =readline.createInterface({
+//  input:fs.createReadStream('myrenamefile.txt')
+// });
+// var lineno = 0;
+// myInterface.on('line',function(line){
+//     lineno++;
+//     console.log('line number',+lineno+':'+line);
+// }
+// );
+
+var standard_input = process.stdin;
+standard_input.setEncoding('utf-8');
+console.log("user input");
+standard_input.on('data',function(data){
+    if(data =='exit\n'){
+        console.log("user input completed");
+        process.exit();
+    }
+     else{
+         console.log("user input ",+data);
+     }   
+    }
+);
