@@ -312,3 +312,175 @@ var a = require('readline')
 //  ];
 
 // console.log(array_filter(stud));
+
+//remove undefined functions from array
+
+// function remove(myArray){
+//     return myArray.filter(function(element, index, array){
+//         return element;
+//     });
+// }
+// var arr = [1, undefined,3,undefined,5];
+// console.log(arr);
+// console.log(remove(arr));
+
+// function map()
+
+// function array_map(stud){
+//     return stud.map(function(student, index, array){
+//        student.bIsDistinction=(student.per >= 75.0) ? true : false;
+//       return student;
+ 
+// });
+// }
+// stud =[
+//     {studid:"15",per:66.2},
+//     {studid:"5",per:96.1},
+//     {studid:"1",per:56.3},
+//     {studid:"105",per:86.4}
+// ];
+// console.log(array_map(stud));
+
+//reduce() function of array
+// function array_reduce(previousValue, currentValue, index, array){
+//     return previousValue + currentValue;
+// }
+
+// var arr = [1,2,3,4,5].reduce(array_reduce);
+// console.log(arr);
+
+// var arr=[
+//     {studid:"res",per:200,location:"pune"},
+//     {studid:"asd",per:100,location:"pune"},
+//     {studid:"wer",per:66,location:"mumbai"},
+//     {studid:"hj",per:100,location:"pune"}
+
+
+// ];
+// function arrayreduce(previousValue,currentValue,index, array){
+//     if(currentValue.location === "pune"){
+//         return previousValue + currentValue.per;
+//     }
+//     return previousValue;
+// }
+// var result = arr.reduce(arrayreduce);
+// console.log(result);
+// var arr=[{name: "customer 1", sales: 500, location: "NY"}, 
+//          {name: "customer 1", sales: 200, location: "NJ"}, 
+//           {name: "customer 1", sales: 700, location: "NY"}, 
+//          {name: "customer 1", sales: 200, location: "ORD"}, 
+//          {name: "customer 1", sales: 300, location: "NY"}]; 
+  
+// function reduceFun2(previousValue, currentValue, index, array){ 
+//     if(currentValue.location === "NY"){ 
+//         return previousValue + currentValue.sales; 
+//     } 
+//     return previousValue; 
+// } 
+  
+// var totalSalesInNY = arr.reduce(reduceFun2); 
+  
+// console.log(totalSalesInNY);
+
+// concat array
+
+// var arr1 = [1,2,3,4,5];
+// var arr2 = [6,9,8,7];
+// var arr3 = arr1.concat(arr2);
+// console.log(arr3);
+
+// with keyword
+         // Define a function which will work as a method
+// function addPrice(amount){
+//     with(this){
+//         price = amount;
+//     }
+// }
+// function book(author){
+//     this.author = author;
+//     this.price = 0;
+//     this.addPrice = addPrice; //Assign that method as property
+// }
+// var myBook = new book("Reshma");
+// myBook.addPrice(100);
+// console.log("book author is:"+myBook.author);
+// console.log("book price is:"+myBook.price);
+ 
+// console.log("How to use chartAT");
+// var str = new String("HI,this is reshma");
+// console.log("char at index(0): " +str.charAt(0));
+// console.log("char at index(1): " +str.charAt(1));
+// console.log("char at index(2): " +str.charAt(2));
+// console.log("char at index(3): " +str.charAt(3));
+
+// console.log("How to use charCodeAT");
+// var str = new String("HI,this is reshma");
+// console.log("char code at index(0): " +str.charCodeAt(0));
+// console.log("char code at index(1): " +str.charCodeAt(1));
+// console.log("char code at index(2): " +str.charCodeAt(2));
+// console.log("char code at index(3): " +str.charCodeAt(3));
+
+// console.log("javasrcipt indexof() method");
+// var str1 =new String("hello,reshma kale");
+// var index =str1.indexOf(",");
+// console.log("word found at index :"+index);
+
+// console.log("javasrcipt lastIndexof() method");
+// var str1 =new String("hello,reshma kale,hello");
+// var index =str1.lastIndexOf("hello");
+// console.log("word found at index :"+index);
+// console.log("javasrcipt localeCompare() method");
+// var str1 =new String("hello,reshma kale");
+// var index =str1.localeCompare("xyz");
+// console.log("first compare:"+index);
+
+// var index=str1.localeCompare("hello,reshma kale");
+// console.log("Second compare:"+index);
+// var index=str1.localeCompare("abcd");
+// console.log("third compare:"+index);
+
+// console.log("javascript replace() method...flag-gi g - global match,i-ignore case");
+// var str = new String("apples are sweet,apples are juicy");
+// var re = /apples/gi;
+// var newString = str.replace(re,"Oranges");
+// console.log(newString);
+// console.log("javascript search() methode");
+// var re = /apples/gi;
+// var str = "apples are sweet,apples are juicy";
+
+
+// if(str.search(re) == -1){
+//       console.log("apples not found...");
+//     }
+//     else
+//     {
+//       console.log("apples  found...")
+//     }
+
+// console.log("javascript slice() methode");
+// var str = "apples are sweet,apples are juicy";
+// var slice = str.slice(5,-5);
+// console.log(slice);
+
+// console.log("javascript toLowerCase() methode");
+// var str = "apples are sweet,apples are juicy";
+// var slice = str.toLocaleLowerCase();
+// console.log(slice);
+// console.log("javascript toUpperCase() methode");
+// var str = "apples are sweet,apples are juicy";
+// var slice = str.toUpperCase();
+// console.log(slice);
+// console.log("javascript valueOf() methode");
+// var str = new String("apples are sweet,apples are juicy");
+// console.log(str.valueOf());
+
+// Date methods
+
+// var dt = new Date();
+// console.log(dt);
+// console.log(dt.getDate());
+// console.log(dt.getFullYear());
+// console.log(dt.getHours());
+// console.log(dt.getMilliseconds());
+// console.log(dt.getMinutes());
+// console.log(dt.getTimezoneOffset());
