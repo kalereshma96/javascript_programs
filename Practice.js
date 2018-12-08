@@ -1,12 +1,12 @@
-var readline = require('readline')
+// var readline = require('readline')
 
-var read = readline.createInterface({
-    input:process.stdin,
-    output:process.stdout
+// var read = readline.createInterface({
+//     input:process.stdin,
+//     output:process.stdout
 
-});
-read.setPrompt();
-read.prompt();
+// });
+// read.setPrompt();
+// read.prompt();
 
 // var globalVar = "This is global variable";
 // function fun(){
@@ -497,36 +497,41 @@ read.prompt();
 // var name = prompt("what is your name");
 // console.log("hi"+name);
 
-// var fs=require('fs');
-// // var data=fs.readFileSync('word.json');
-// // var words = JSON.parse(data);
-// // var bodyparser=require('body-parser');
-// // console.log(words);
-// fs.open('sample.txt','w',function(err,file){
-//    if (err) throw err;
-//    console.log("saved..")
-// }
-// );
-// fs.writeFile('sample.txt','hello reshma',function(err){
-//     if(err) throw err;
-//     console.log("saved");
-// }
-// );
-// fs.appendFile('sample.txt','finally done with file operation',function(err){
-//     if(err) throw err;
-//     console.log("Updated...");
-// }
-// );
-// fs.writeFile('sample.txt','this is replace content of file',function(err){
-//     if (err) throw err;
-//     console.log("replaced..");
-// }
-// );
-// fs.rename('sample.txt','myrenamefile.txt',function(err){
-//     if(err) throw err;
-//     console.log("Renamed successful...!");
-// }
-// );
+var fs=require('fs');
+// var data=fs.readFileSync('word.json');
+// var words = JSON.parse(data);
+// var bodyparser=require('body-parser');
+// console.log(words);
+fs.open('sample.txt','w',function(err,file){
+   if (err) throw err;
+   console.log("saved..")
+}
+);
+fs.writeFile('sample.txt','hello reshma',function(err){
+    if(err) throw err;
+    console.log("saved");
+}
+);
+fs.appendFile('sample.txt','finally done with file operation',function(err){
+    if(err) throw err;
+    console.log("Updated...");
+}
+);
+fs.writeFile('sample.txt','this is replace content of file',function(err){
+    if (err) throw err;
+    console.log("replaced..");
+}
+);
+fs.rename('sample.txt','myrenamefile.txt',function(err){
+    if(err) throw err;
+    console.log("Renamed successful...!");
+}
+);
+fs.readFile('myrenamefile.txt','utf-8',function(err,data){
+    if(err) throw err;
+    console.log("Your file content is:",data);
+}
+);
 
 // var readline = require('readline');
 // var fs = require('fs');
@@ -539,17 +544,161 @@ read.prompt();
 //     console.log('line number',+lineno+':'+line);
 // }
 // );
+// var readline = require('readline');
+// //var standard_input = process.stdin;
+// //standard_input.setEncoding('utf-8');
+// var read = readline.createInterface({
+//     input: process.stdin,
+//     output: process.stdout
+// });
+// console.log("user input");
+// read.on('data',function(data){
+//     if(data =='exit\n'){
+//         console.log("user input completed");
+//         process.exit();
+//     }
+//      else{
+//          console.log("user input ",+data);
+//      }   
+//     }
+// );
 
-var standard_input = process.stdin;
-standard_input.setEncoding('utf-8');
-console.log("user input");
-standard_input.on('data',function(data){
-    if(data =='exit\n'){
-        console.log("user input completed");
-        process.exit();
-    }
-     else{
-         console.log("user input ",+data);
-     }   
-    }
-);
+// var readline = require('readline-sync');
+// var name=readline.question("What is your name?");
+// console.log(name);
+// console.log("hi " +name+" how are you");
+
+// const readline = require('readline');
+// const read = readline.createInterface({
+//     input : process.stdin,
+//     output : process.stdout 
+
+// });
+// read.question("what is your name:",(answer) =>{
+//      read.prompt();
+//      //read.setPrompt(prompt);
+//     console.log("your name is",answer);
+//     read.close();
+
+// });
+
+//read file stream line by line
+
+// const fs = require('fs');
+// const readline = require('readline');
+//async function processLineByLine(){
+//     const fileStream = fs.createReadStream('myrenamefile.txt')
+// const read=readline.createInterface({
+//     input:fileStream,
+//     crlfDelay:Infinity
+
+// });
+
+//   //  for await (const line of read)
+//   read.on('line',(line)=>{
+//         console.log('your preocess line',line);
+
+//     });
+    
+// }
+// processLineByLine();
+
+// // constructor with prototype method
+
+// // class Rectangle{
+// //     constructor(height,width){
+// //         this.height=height;
+// //         this.width=width;
+// //     }
+
+// // get area(){
+// //     return this.calcArea();
+
+// // }
+// // calcArea(){
+// //     return this.height*this.width;
+// // }
+// // }
+// // var rect = new Rectangle(10,20);
+// // console.log(rect.area);
+
+// // static methods
+
+// class Point{
+//      constructor(x,y){
+//          this.x=x;
+//          this.y=y;
+
+//      }
+
+//      static Distance(a,b){
+//          const dx =a.x -b.x;
+//          const dy = a.y - b.y;
+
+//          return Math.hypot(dx,dy);
+//      }
+// }
+// const p1=new Point(5, 10);
+// const p2=new Point(10,5);
+// console.log("Distance is ",Point.Distance(p1,p2));
+
+// function User (theName, theEmail) {
+//     this.name = theName;
+//     this.email = theEmail;
+//     this.quizScores = [];
+//     this.currentScore = 0;
+// }
+
+// User.prototype = {
+//     constructor: User,
+//     saveScore:function (theScoreToAdd)  {
+//         this.quizScores.push(theScoreToAdd)
+//     },
+//     showNameAndScores:function ()  {
+//         var scores = this.quizScores.length > 0 ? this.quizScores.join(",") : "No Scores Yet";
+//         return this.name + " Scores: " + scores;
+//     },
+//     changeEmail:function (newEmail)  {
+//         this.email = newEmail;
+//         return "New Email Saved: " + this.email;
+//     }
+// }
+// // A User 
+// firstUser = new User("Richard", "Richard@examnple.com"); 
+// firstUser.changeEmail("RichardB@examnple.com");
+// firstUser.saveScore(15);
+// firstUser.saveScore(10); 
+
+// firstUser.showNameAndScores(); //Richard Scores: 15,10
+// console.log(firstUser);
+// // Another User
+// secondUser = new User("Peter", "Peter@examnple.com");
+// secondUser.saveScore(18);
+// secondUser.showNameAndScores(); //Peter Scores: 18
+// console.log(secondUser);
+
+// var prompt = require('prompt');
+// var properties =[
+//     {
+//         name:'username',
+//         validator: /^[a-zA-Z\s\-]+$/,
+//         warning:'user name must be an spaces,dashes'
+
+//     },
+//     {
+//         name:'password',
+//         hidden:true
+//     }
+// ];
+// prompt.start();
+// prompt.get(properties,function(err,result){
+//     if(err){return onErr(err);}
+//     console.log('The user input is:');
+//     console.log('user name is: '+result.username);
+//     console.log('password is:'+result.password);
+
+// });
+// function onErr(err){
+// console.log(err);
+// return 1;
+// }
