@@ -1,0 +1,58 @@
+{
+  "rice": [
+    {},
+    {
+      "Name": "basmati",
+      "Weight": "5",
+      "Price": "60",
+      "Amount": 300
+    },
+    {
+      "Name": "kolam",
+      "Weight": "5",
+      "Price": "60",
+      "Amount": 300
+    },
+    {
+      "Name": "tukada",
+      "Weight": "45",
+      "Price": "12",
+      "Amount": 540
+    },
+    {
+      "Name": "indiagate",
+      "Weight": "2",
+      "Price": "50",
+      "Amount": 100
+    },
+    {
+      "Name": "xyz",
+      "Weight": "2",
+      "Price": "90",
+      "Amount": 180
+    },
+    {
+      "Name": "abc",
+      "Weight": "4",
+      "Price": "50",
+      "Amount": 200
+    }
+  ],
+  "pulses": [
+    {
+      "Name": "mong dal",
+      "Weight": "5",
+      "Price": "45",
+      "Amount": 225
+    }
+  ],
+  "wheat": [
+    {},
+    {
+      "Name": "spelt wheat",
+      "Weight": "5",
+      "Price": "60",
+      "Amount": 300
+    }
+  ]
+}

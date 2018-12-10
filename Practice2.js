@@ -93,3 +93,12 @@
 // console.log(dt.getMilliseconds());
 // console.log(dt.getMinutes());
 // console.log(dt.getTimezoneOffset());
+
+var fs = require('fs');
+console.log('start');
+var content = fs.readFileSync("jsonexample.json");
+var jsonContent = JSON.parse(content);
+console.log("Name is:",jsonContent.Name);
+console.log("age is:",jsonContent.Age);
+console.log("Adress is:",jsonContent.Address);
+console.log("Exit");
