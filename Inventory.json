@@ -1,6 +1,5 @@
 {
   "rice": [
-    {},
     {
       "Name": "basmati",
       "Weight": "5",
@@ -36,6 +35,30 @@
       "Weight": "4",
       "Price": "50",
       "Amount": 200
+    },
+    {
+      "Name": "reshma",
+      "Weight": "5",
+      "Price": "200",
+      "Amount": 1000
+    },
+    {
+      "Name": "basmati",
+      "Weight": "2",
+      "Price": "50",
+      "Amount": 100
+    },
+    {
+      "Name": "basmati",
+      "Weight": "2",
+      "Price": "",
+      "Amount": 0
+    },
+    {
+      "Name": "reshma",
+      "Weight": "6",
+      "Price": "200",
+      "Amount": 1200
     }
   ],
   "pulses": [
@@ -47,12 +70,17 @@
     }
   ],
   "wheat": [
-    {},
     {
       "Name": "spelt wheat",
       "Weight": "5",
       "Price": "60",
       "Amount": 300
+    },
+    {
+      "Name": "saurabh",
+      "Weight": "5",
+      "Price": "50",
+      "Amount": 250
     }
   ]
 }

@@ -10,6 +10,17 @@ console.log("0. Exit");
 console.log("1. Rice");
 console.log("2. Pulses");
 console.log("3. Wheat");
+console.log("Available items are:");
+var item = [];
+var Inventory = JSON.parse(fs.readFileSync('Inventory.json','utf-8'));
+for( i in Inventory){
+    for (x in Inventory[i]){
+        item.push({Name:Inventory[i][x].Name});
+    }
+}
+if(item !== undefined)
+console.log(item);
+
 
 read.setPrompt("input>");
 read.prompt();
@@ -40,9 +51,13 @@ read.on('line',function(line){
                         console.log(JSON.stringify(inventory));
                         read.prompt();
 
-                        console.log("Available items are:")
 
                     });
+                    // for( var i=0; i < Inventory.rice.lenght; i++){
+                    //     if(Inventory.rice[i].Name == "riceName")
+                    //     console.log("item available in inventory:");
+
+                    // }
                 });
 
             });
@@ -102,23 +117,13 @@ read.on('line',function(line){
    
     
         }
-        var item = [];
-        var Inventory = JSON.parse(fs.readFileSync('Inventory.json','utf-8'));
-        for( i in Inventory){
-            for (x in Inventory[i]){
-                item.push({Name:Inventory[i][x].Name});
-                console.log(item);
-            }
-        }
+        
     else{
         console.log("Enter valid input.");
         read.prompt();
     }
     read.on('close',function(){
         process.exit(0);
-    });
-
- 
-    
+    });  
 
 });

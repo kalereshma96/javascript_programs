@@ -497,41 +497,41 @@
 // var name = prompt("what is your name");
 // console.log("hi"+name);
 
-var fs=require('fs');
-// var data=fs.readFileSync('word.json');
-// var words = JSON.parse(data);
-// var bodyparser=require('body-parser');
-// console.log(words);
-fs.open('sample.txt','w',function(err,file){
-   if (err) throw err;
-   console.log("saved..")
-}
-);
-fs.writeFile('sample.txt','hello reshma',function(err){
-    if(err) throw err;
-    console.log("saved");
-}
-);
-fs.appendFile('sample.txt','finally done with file operation',function(err){
-    if(err) throw err;
-    console.log("Updated...");
-}
-);
-fs.writeFile('sample.txt','this is replace content of file',function(err){
-    if (err) throw err;
-    console.log("replaced..");
-}
-);
-fs.rename('sample.txt','myrenamefile.txt',function(err){
-    if(err) throw err;
-    console.log("Renamed successful...!");
-}
-);
-fs.readFile('myrenamefile.txt','utf-8',function(err,data){
-    if(err) throw err;
-    console.log("Your file content is:",data);
-}
-);
+// var fs=require('fs');
+// // var data=fs.readFileSync('word.json');
+// // var words = JSON.parse(data);
+// // var bodyparser=require('body-parser');
+// // console.log(words);
+// fs.open('sample.txt','w',function(err,file){
+//    if (err) throw err;
+//    console.log("saved..")
+// }
+// );
+// fs.writeFile('sample.txt','hello reshma',function(err){
+//     if(err) throw err;
+//     console.log("saved");
+// }
+// );
+// fs.appendFile('sample.txt','finally done with file operation',function(err){
+//     if(err) throw err;
+//     console.log("Updated...");
+// }
+// );
+// fs.writeFile('sample.txt','this is replace content of file',function(err){
+//     if (err) throw err;
+//     console.log("replaced..");
+// }
+// );
+// fs.rename('sample.txt','myrenamefile.txt',function(err){
+//     if(err) throw err;
+//     console.log("Renamed successful...!");
+// }
+// );
+// fs.readFile('myrenamefile.txt','utf-8',function(err,data){
+//     if(err) throw err;
+//     console.log("Your file content is:",data);
+// }
+// );
 
 // var readline = require('readline');
 // var fs = require('fs');
@@ -702,3 +702,52 @@ fs.readFile('myrenamefile.txt','utf-8',function(err,data){
 // console.log(err);
 // return 1;
 // }
+// var x = new Array(5);
+
+// for (var i = 0; i < x.length; i++) {
+//   x[i] = new Array(1);
+// }
+
+// console.log(x);
+//function createArray(length) {
+//     var arr = new Array(length || 0),
+//         i = length;
+
+//     if (arguments.length > 1) {
+//         var args = Array.prototype.slice.call(arguments, 1);
+//         while(i--) arr[length-1 - i] = createArray.apply(this, args);
+//     }
+
+//     return arr;
+// }
+
+// //createArray();     // [] or new Array()
+
+// //createArray(2);    // new Array(2)
+
+// createArray(3, 2); 
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
+  
+  // Used like so
+  var arr2 = ["Clubs", "Diamonds", "Hearts", "Spades"];
+  var arr = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11 , 12 , 13 , 14];
+  arr = shuffle(arr);
+  console.log(arr);

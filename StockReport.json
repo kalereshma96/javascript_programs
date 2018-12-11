@@ -1,0 +1,21 @@
+{
+  "stock1": [
+    {
+      "StockName": "abc",
+      "Shares": "5",
+      "sharePrice": "2000"
+    },
+    {
+      "StockName": "xyz",
+      "Shares": "5",
+      "sharePrice": "1000",
+      "TotalAmount": 5000
+    },
+    {
+      "StockName": "saurabh",
+      "Shares": "5",
+      "sharePrice": "3",
+      "TotalAmount": 15
+    }
+  ]
+}
